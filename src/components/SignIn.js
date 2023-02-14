@@ -34,7 +34,7 @@ const SignIn = () => {
     <div className="bg-image pt-5">
       <div className="d-flex align-items-center justify-content-center w-100 h-100">
         <div className="bg-white signin-box position-relative">
-          <Link to="/welcome" className="text-dark">
+          <Link to="/" className="text-dark">
             <AiOutlineArrowLeft className="back-icon" />
           </Link>
           <div className="box-container">

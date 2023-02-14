@@ -30,92 +30,97 @@ const RegisterPage = () => {
     }
   };
   return (
-    <div className="bg-image pt-5">
-      <div className="d-flex align-items-center justify-content-center w-100 h-100">
-        <div className="bg-white reg-box position-relative">
-          <Link to="/" className="text-dark">
-            <AiOutlineArrowLeft className="back-icon" />
+    <div className='bg-image pt-5'>
+      <div className='d-flex align-items-center justify-content-center w-100 h-100'>
+        <div className='bg-white reg-box position-relative'>
+          <Link to='/' className='text-dark'>
+            <AiOutlineArrowLeft className='back-icon' />
           </Link>
-          <div className="box-container">
+          <div className='box-container'>
             <div>
-              <h5 className="welcome-text">Create an Account</h5>
+              <h5 className='welcome-text'>Create an Account</h5>
             </div>
-            <p className="pb-3 px-4 text-center fs-6">
+            <p className='pb-3 px-4 text-center fs-6'>
               Fill in your details below to create an account with us
             </p>
 
-            <div className="px-5">
+            <div className='px-5'>
               {/* <div className="pg-1">1</div>
               <div className="pg-2">2</div>
               <div className="pg-2">3</div> */}
               <MultiStepForm step={index} />
             </div>
 
-            <form className="mt-4">
-              <div className="my-2 w-100 position-relative">
+            <form className='mt-4'>
+              <div className='my-2 w-100 position-relative'>
                 <input
-                  type="text"
-                  name="fullname"
-                  placeholder="Full name"
-                  className="input-tag my-1"
+                  type='text'
+                  name='fullname'
+                  placeholder='Full name'
+                  className='input-tag my-1'
                 />
-                <FaRegUser className="name-icon" />
+                <FaRegUser className='name-icon' />
               </div>
 
-              <div className="my-2 w-100 position-relative">
+              <div className='my-2 w-100 position-relative'>
                 <input
-                  type="email"
-                  placeholder="Email Address"
-                  name="email"
-                  className="input-tag my-1"
+                  type='email'
+                  placeholder='Email Address'
+                  name='email'
+                  className='input-tag my-1'
                 />
-                <AiOutlineMail className="email-icon" />
+                <AiOutlineMail className='email-icon' />
               </div>
 
-              <div className="my-2 w-100 position-relative">
+              <div className='my-2 w-100 position-relative'>
                 <input
-                  type={passwordEye === false ? "password" : "text"}
-                  placeholder="Password"
-                  name="password"
-                  className="input-tag my-1"
+                  type={passwordEye === false ? 'password' : 'text'}
+                  placeholder='Password'
+                  name='password'
+                  className='input-tag my-1'
                 />
-                <div className="cursor-pointer password-icon">
+                <div className='cursor-pointer password-icon'>
                   {passwordEye === false ? (
                     <AiFillEyeInvisible
                       onClick={handlePasswordEye}
-                      className="text-gray-400 cursor-pointer"
+                      className='text-gray-400 cursor-pointer'
                     />
                   ) : (
                     <AiFillEye
                       onClick={handlePasswordEye}
-                      className="text-gray-400 cursor-pointer"
+                      className='text-gray-400 cursor-pointer'
                     />
                   )}
                 </div>
               </div>
             </form>
-            <button onClick={nextBtn} className="my-2 next-btn">
-              Next
+            <button onClick={nextBtn} className='my-2 next-btn'>
+              <Link
+                className='text-dark text-decoration-none fs-6'
+                to='/verify'
+              >
+                Next
+              </Link>
             </button>
 
-            <div className="text-center mt-1">
+            <div className='text-center mt-1'>
               <small>
-                Already have an account?{" "}
-                <Link to="/" className="text-decoration-none">
+                Already have an account?{' '}
+                <Link to='/signIn' className='text-decoration-none'>
                   Sign In
                 </Link>
               </small>
             </div>
           </div>
 
-          <div className="d-flex align-items-center justify-content-between">
+          <div className='d-flex align-items-center justify-content-between'>
             <div>
-              <Link to="/" className="text-dark text-decoration-none fs-6">
+              <Link to='/' className='text-dark text-decoration-none fs-6'>
                 Privacy Policy
               </Link>
             </div>
             <div>
-              <Link to="/" className="text-dark text-decoration-none fs-6">
+              <Link to='/' className='text-dark text-decoration-none fs-6'>
                 FAQ
               </Link>
             </div>
@@ -123,7 +128,7 @@ const RegisterPage = () => {
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 export default RegisterPage;

@@ -17,7 +17,7 @@ const WelcomePage = () => {
                         <button className='my-2 reg-btn'>Register</button>
                     </Link>
 
-                    <Link to='/sign-in'>
+                    <Link to='/signIn'>
                         <button className=' sign-btn'>Sign In</button>
                     </Link>
                 </div>
